@@ -1,0 +1,16 @@
+<form method="POST" action="/">
+    {{ form.hidden_tag() }}
+    {{ form.csrf_token }}
+
+    <div>{{ form.username.label }}: {{ form.username() }}</div>
+    {% if form.username.errors %}
+    <ul class="errors">{% for error in form.username.errors %}<li>{{ error }}</li>{% endfor %}</ul>
+    {% endif %}
+
+    <div>{{ form.password.label }}: {{ form.password() }}</div>
+    {% if form.password.errors %}
+    <ul class="errors">{% for error in form.password.errors %}<li>{{ error }}</li>{% endfor %}</ul>
+    {% endif %}
+
+    <input type="submit" value="Go">
+</form>
