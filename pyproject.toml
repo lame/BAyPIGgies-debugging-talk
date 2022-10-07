@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "baypiggies-debugging"
+version = "0.1.0"
+description = ""
+authors = ["Ryan Kuhl <ryan@kuhl.dev>"]
+readme = "README.md"
+packages = [{include = "baypiggies_debugging"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Flask = "^2.2.2"
+Flask-WTF = "^1.0.1"
+WTForms = "^3.0.1"
+ipdb = "^0.13.9"
+ipython = "^8.5.0"
+jupyterlab = "^3.4.8"
+rise = "^5.7.1"
+nbconvert = {extras = ["webpdf"], version = "^7.2.1"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

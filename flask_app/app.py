@@ -11,8 +11,9 @@ app.config["SECRET_KEY"] = str(uuid4())
 csrf = CSRFProtect(app)
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def root():
+    breakpoint()
     form = MyForm()
     if form.validate_on_submit():
         return redirect("/success")
